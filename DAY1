@@ -1,5 +1,28 @@
+1
 class Main{
     public static void main(String[] args){
         System.out.print("cse \"KARE\" students");
+    }
+}
+
+2
+//i/p.              o/p
+//\n.               \n
+class Main{
+    public static void main(String[] args){
+        System.out.print("\\n");
+    }
+}
+
+3
+//i/p.              o/p
+//20.               20
+//10.               10
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        System.out.print(a);
     }
 }
