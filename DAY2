@@ -103,3 +103,69 @@ public class MAIN {
 			System.out.print(c + " is Smallest");
 	}
 }
+
+7
+// i/p                        o/p
+//  3                          hi
+//  12                         hi
+//  20                         hello
+//  15                        hihello
+package CSE;
+import java.util.*;
+public class MAIN {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a;
+		a = sc.nextInt();
+		if (a%3==0 && a%5==0)
+			System.out.print("hihello");
+		else if(a%3==0)
+			System.out.print("hi");
+		else if(a%5==0)
+			System.out.print("hello");
+	}
+}
+//2ND METHOD
+package CSE;
+import java.util.*;
+public class MAIN {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a;
+		a = sc.nextInt();
+		if (a%3==0)
+			System.out.print("hi");
+		if(a%5==0)
+			System.out.print("hello");
+	}
+}
+
+8
+//Write a java program to check the given year is leap year or not
+//  i/p                         o/p
+//  2004                       Leap Year
+//  2000                       Leap Year
+//  2002                       Not a Leap Year
+//  1600                       Leap Year
+//  1900                       Not a Leap Year
+package CSE;
+import java.util.*;
+public class MAIN {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int year;
+		year = sc.nextInt();
+		if (year%400==0 || year%4==0 && year%100!=0)
+			System.out.print("Leap Year");
+		else
+			System.out.print("Not a Leap Year");
+	}
+}
+
+9
+//TO CHECK RAILWAY TIME IS VALID OR NOT
+//     i/p                          o/p
+//   0  0  0                       valid
+//  12  45  60                     invalid
+//  13  45  54                     valid
+//  24  6  4                       invalid
