@@ -169,3 +169,16 @@ public class MAIN {
 //  12  45  60                     invalid
 //  13  45  54                     valid
 //  24  6  4                       invalid
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+        int s = sc.nextInt();
+        if (h < 24 && m < 60 && s < 60)
+            System.out.println("valid");
+        else
+            System.out.println("invalid");
+    }
+}
