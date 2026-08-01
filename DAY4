@@ -260,4 +260,30 @@ class Main{
 }
 
 14
-
+//   i/p              o/p
+//                 *********
+//                 **** ****
+//                 ***   ***
+//                 **     **
+//                 *       *
+//                 **     **
+//                 ***   ***
+//                 **** ****
+//                 *********
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int row = 0; row < 2 * n - 1; row++) {
+            for (int col = 0; col < 2 * n - 1; col++) {
+                if (col < Math.abs(n - 1 - row) ||
+                    col >= (2 * n - 1) - Math.abs(n - 1 - row))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
