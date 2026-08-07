@@ -1,0 +1,76 @@
+// WRITE A JAVA PROGRAM TO PRINT LENGTH OF THE STRING WITHOUT USING IN-BUILT METHOD
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int c = 0;
+        for(char ch:s.toCharArray())
+        c++;
+        System.out.print(c);
+    }
+}
+
+// WRITE A JAVA PROGRAM TO PRINT WORD COUNT OF THE STRING WITHOUT USING IN-BUILT METHOD
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int c=0;
+        for(char ch:s.toCharArray())
+        if(ch == ' ')
+        c++;
+        System.out.print("Total Number of words: " + (c+1));
+    }
+}
+
+// WRITE A JAVA PROGRAM TO FIND THE VOWELS COUNT IN THE GIVEN STRING
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine().toUpperCase();
+        int c=0;
+        for(char ch:s.toCharArray()){
+        if(ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+        c++;
+        }
+        System.out.print("Total Number of VOWELS: " + c);
+    }
+}
+
+// WRITE A JAVA PROGRAM TO FIND THE CONSONANTS COUNT IN THE GIVEN STRING
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine().toUpperCase();
+        int c=0;
+        for(char ch:s.toCharArray()){
+        if(!(ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'))
+        c++;
+        }
+        System.out.print("Total Number of consonants: " + c);
+    }
+}
+
+// WRITE A JAVA PROGRAM TO REVERSE THE GIVEN STRING
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        char ch[] = str.toCharArray();
+        int s=0;
+        int e=ch.length-1;
+        while(s<e){
+            char temp = ch[s];
+            ch[s] = ch[e];
+            ch[e] = temp;
+            s++;
+            e--;
+        }
+        System.out.println(new String(ch));
+    }
+}
