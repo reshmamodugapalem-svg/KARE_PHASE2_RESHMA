@@ -74,3 +74,77 @@ class Main{
         System.out.println(new String(ch));
     }
 }
+
+// UNIQUE ELEMENT COUNT
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int arr[] = new int[256];
+        int c= 0;
+        for(char ch:s.toCharArray()){
+            arr[ch]++;
+        }
+        for(int i = 0; i< 256;i++){
+            if(arr[i]==1)
+            c++;
+        }
+        System.out.print("Unique element count: " + c);
+    }    
+}
+
+// DUPLICATE ELEMENT COUNT
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int arr[] = new int[256];
+        int c= 0;
+        for(char ch:s.toCharArray()){
+            arr[ch]++;
+        }
+        for(int i = 0; i< 256;i++){
+            if(arr[i]>1)
+            c++;
+        }
+        System.out.print("Duplicate element count: " + c);
+    }    
+}
+
+// TO PRINT THE ALPHABET THAT IS DUPLICATE IN A STRING
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int arr[] = new int[256];
+        int c= 0;
+        for(char ch:s.toCharArray()){
+            arr[ch]++;
+        }
+        for(int i = 0; i< 256;i++){
+            if(arr[i]==2)
+            System.out.print((char)i + " ");
+        }
+    }    
+}
+
+// TO PRINT THE FREQUENCY OF THE CHARACTER IN A STRING
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int arr[] = new int[256];
+        int c= 0;
+        for(char ch:s.toCharArray()){
+            arr[ch]++;
+        }
+        for(int i = 0; i< 256;i++){
+            if(arr[i]>0)
+            System.out.println((char)i + "  :" +arr[i]);
+        }
+    }    
+}
