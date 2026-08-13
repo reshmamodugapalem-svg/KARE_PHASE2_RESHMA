@@ -52,7 +52,7 @@ public class Main {
             System.out.println(rn+" "+name);
         }
     public static void main(String[] args) {
-        Main obj=new Main(18,"siddu");
+        Main obj=new Main(39,"Reshma");
         obj.display();
     }
 }
@@ -71,7 +71,7 @@ public class Main {
             System.out.println(rn+" "+name);
         }
     public static void main(String[] args) {
-        Main obj=new Main(18,"siddu");
+        Main obj=new Main(39,"Reshma");
         Main ob=new Main(obj);
         obj.display();
     }
