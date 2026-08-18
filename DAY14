@@ -1,3 +1,4 @@
+1
 //write a java programe to fine the nth term if fibinocci series by using recursion
 import java.util.*;
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
     }
 }
 
+2
 //NO argument Constructor
 import java.util.*;
 public class Main {
@@ -26,6 +28,8 @@ public class Main {
 
     }
 }
+
+3
 // default Constructor
 import java.util.*;
 public class Main {
@@ -36,9 +40,10 @@ public class Main {
         }
     public static void main(String[] args) {
         Main obj=new Main();
-
     }
 }
+
+4
 //parametrized Constructor
 import java.util.*;
 public class Main {
@@ -56,6 +61,7 @@ public class Main {
         obj.display();
     }
 }
+5
 //copy Constructor
 public class Main {
         int rn;
