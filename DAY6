@@ -1,3 +1,4 @@
+1
 // Write a java program to count the no.of.digits in the given Number
 import java.util.*;
 class Main{
@@ -13,6 +14,7 @@ class Main{
     }
 }
 
+2
 // Write a java program t0 reverrse the given digits using right side formation
 import java.util.*;
 class Main{
@@ -29,6 +31,7 @@ class Main{
     }
 }
 
+3
 // Write a java program t0 count the odd,even digits in the given number
 import java.util.*;
 class Main{
@@ -49,6 +52,7 @@ class Main{
     }
 }
 
+4
 // Write a java program to count the prime digits in the given number
 import java.util.*;
 class Main{
@@ -66,6 +70,7 @@ class Main{
     }
 }
 
+5
 // Write a java program to reverse the given number without using right side formation
 import java.util.*;
 class Main{
@@ -81,6 +86,7 @@ class Main{
     }
 }
 
+6
 // Palindrome Number
 import java.util.*;
 class Main{
@@ -100,6 +106,7 @@ class Main{
     }
 }
 
+7
 // HARSHAD NUMBER
 import java.util.*;
 class Main{
@@ -120,6 +127,7 @@ class Main{
     }
 }
 
+8
 // NEON NUMBER
 import java.util.*;
 class Main {
@@ -140,7 +148,8 @@ class Main {
     }
 }
 
-// PERFECT NUMBERB
+9
+// PERFECT NUMBER
 import java.util.*;
 class Main {
     public static void main(String[] args) {
@@ -158,3 +167,23 @@ class Main {
     }
 }
 
+10
+// WRITE A JAVA PROGRAM TO FIND THE PRODUCT OF DIGITS IN THE GIVEN NUMBER
+// i/p                  o/p
+// 1234                 Product of digits: 24
+// 256                  Product of digits: 60
+// 105                  Product of digits: 0
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d, product = 1;
+        while(n != 0) {
+            d = n % 10;
+            product = product * d;
+            n = n / 10;
+        }
+        System.out.print("Product of digits: " + product);
+    }
+}
