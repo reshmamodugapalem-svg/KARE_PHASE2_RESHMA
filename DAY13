@@ -1,3 +1,4 @@
+1
 //Binar search
 import java.util.*;
 public class Main
@@ -29,6 +30,7 @@ public class Main
 target=40;
 Target found at index : 9
 
+2
 import java.util.*;
 public class Main
 {
