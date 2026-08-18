@@ -1,3 +1,4 @@
+1
 // WRITE A JAVA PROGRAM TO PRINT LENGTH OF THE STRING WITHOUT USING IN-BUILT METHOD
 import java.util.*;
 class Main{
@@ -11,6 +12,7 @@ class Main{
     }
 }
 
+2
 // WRITE A JAVA PROGRAM TO PRINT WORD COUNT OF THE STRING WITHOUT USING IN-BUILT METHOD
 import java.util.*;
 class Main{
@@ -25,6 +27,7 @@ class Main{
     }
 }
 
+3
 // WRITE A JAVA PROGRAM TO FIND THE VOWELS COUNT IN THE GIVEN STRING
 import java.util.*;
 class Main{
@@ -40,6 +43,7 @@ class Main{
     }
 }
 
+4
 // WRITE A JAVA PROGRAM TO FIND THE CONSONANTS COUNT IN THE GIVEN STRING
 import java.util.*;
 class Main{
@@ -55,6 +59,7 @@ class Main{
     }
 }
 
+5
 // WRITE A JAVA PROGRAM TO REVERSE THE GIVEN STRING
 import java.util.*;
 class Main{
@@ -75,6 +80,7 @@ class Main{
     }
 }
 
+6
 // UNIQUE ELEMENT COUNT
 import java.util.*;
 class Main{
@@ -94,6 +100,7 @@ class Main{
     }    
 }
 
+7
 // DUPLICATE ELEMENT COUNT
 import java.util.*;
 class Main{
@@ -113,6 +120,7 @@ class Main{
     }    
 }
 
+8
 // TO PRINT THE ALPHABET THAT IS DUPLICATE IN A STRING
 import java.util.*;
 class Main{
@@ -131,6 +139,7 @@ class Main{
     }    
 }
 
+9
 // TO PRINT THE FREQUENCY OF THE CHARACTER IN A STRING
 import java.util.*;
 class Main{
@@ -149,6 +158,7 @@ class Main{
     }    
 }
 
+10
 //2D ARRAYS
 // WRITE A JAVA PROGRAM TO CREATE AND DISPLAY THE 2D ARRAY ELEMETS
 import java.util.*;
@@ -175,6 +185,7 @@ class Main{
     }
 }
 
+11
 // WRITE A JAVA PROGRAM FOR THE SUM OF ARRAY ELEMENTS
 import java.util.*;
 class Main{
@@ -197,6 +208,7 @@ class Main{
     }
 }
 
+12
 // WRITE A JAVA PROGRAM TO PRINT THE PRIMARY AND SECONDARY DIAGNOL VALUES
 import java.util.*;
 class Main{
@@ -221,6 +233,7 @@ class Main{
     }
 }
 
+13
 // WRITE A JAVA PROGRAM TO TRNSPOSE THE MATRIX
 import java.util.*;
 class Main{
