@@ -1,3 +1,4 @@
+1
 // CREATING A LINKEDLIST
 import java.util.*;
 class Node {
@@ -46,6 +47,7 @@ class Main {
     }
 }
 
+2
 // SUM OF LINKEDLIST
 import java.util.*;
 class Node {
@@ -96,6 +98,7 @@ class Main {
     }
 }
 
+3
 // MAXIMUM ELEMENT IN LINKEDLIST
 import java.util.*;
 class Node {
@@ -147,6 +150,7 @@ class Main {
     }
 }
 
+4
 // MINIMUM ELEMENT IN LINKEDLIST
 import java.util.*;
 class Node {
@@ -198,6 +202,7 @@ class Main {
     }
 }
 
+5
 // SEARCH ELEMENT IN LINKEDLIST
 import java.util.*;
 class Node {
@@ -255,6 +260,7 @@ class Main {
     }
 }
 
+6
 // BUBBLE SORT THE LINKEDLIST
 import java.util.*;
 class Node {
