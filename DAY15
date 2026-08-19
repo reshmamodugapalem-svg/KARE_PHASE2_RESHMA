@@ -324,3 +324,238 @@ class Main {
         }
     }
 }
+
+7
+// REVERSE LINKEDLIST
+import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int d) {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main();
+        int d = sc.nextInt();
+        while (d != -1) {
+            m.insert(d);
+            d = sc.nextInt();
+        }
+        m.reverse();
+        m.display();
+    }
+    Node first;
+    void insert(int d) {
+        Node n = new Node(d);
+        if (first == null) {
+            first = n;
+            return;
+        } else {
+            Node temp = first;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = n;
+        }
+    }
+    void reverse() {
+        Node prev = null;
+        Node temp = first;
+        while (temp != null) {
+            Node next = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = next;
+        }
+        first = prev;
+    }
+    void display() {
+        Node temp = first;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+}
+
+8
+// COUNT NUMBER OF NODES IN LINKEDLIST
+import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int d) {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main();
+        int d = sc.nextInt();
+        while (d != -1) {
+            m.insert(d);
+            d = sc.nextInt();
+        }
+        m.count();
+    }
+    Node first;
+    void insert(int d) {
+        Node n = new Node(d);
+        if (first == null) {
+            first = n;
+            return;
+        } else {
+            Node temp = first;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = n;
+        }
+    }
+    void count() {
+        int count = 0;
+        if (first == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        Node temp = first;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        System.out.println("Number of nodes: " + count);
+    }
+}
+
+9
+// DELETE ELEMENT FROM LINKEDLIST
+import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int d) {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main();
+        int d = sc.nextInt();
+        while (d != -1) {
+            m.insert(d);
+            d = sc.nextInt();
+        }
+        int value = sc.nextInt();
+        m.delete(value);
+        m.display();
+    }
+    Node first;
+    void insert(int d) {
+        Node n = new Node(d);
+        if (first == null) {
+            first = n;
+            return;
+        } else {
+            Node temp = first;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = n;
+        }
+    }
+    void delete(int value) {
+        if (first == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        if (first.data == value) {
+            first = first.next;
+            return;
+        }
+        Node temp = first;
+        while (temp.next != null) {
+            if (temp.next.data == value) {
+                temp.next = temp.next.next;
+                return;
+            }
+            temp = temp.next;
+        }
+        System.out.println("Element not found");
+    }
+    void display() {
+        Node temp = first;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+}
+
+10
+// SECOND LARGEST ELEMENT IN LINKEDLIST
+import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int d) {
+        this.data = d;
+        this.next = null;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main();
+        int d = sc.nextInt();
+        while (d != -1) {
+            m.insert(d);
+            d = sc.nextInt();
+        }
+        m.secondLargest();
+    }
+    Node first;
+    void insert(int d) {
+        Node n = new Node(d);
+        if (first == null) {
+            first = n;
+            return;
+        } else {
+            Node temp = first;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = n;
+        }
+    }
+    void secondLargest() {
+        if (first == null || first.next == null) {
+            System.out.println("Not enough elements");
+            return;
+        }
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+        Node temp = first;
+        while (temp != null) {
+            if (temp.data > largest) {
+                second = largest;
+                largest = temp.data;
+            } else if (temp.data > second && temp.data != largest) {
+                second = temp.data;
+            }
+            temp = temp.next;
+        }
+        if (second == Integer.MIN_VALUE) {
+            System.out.println("Second largest does not exist");
+        } else {
+            System.out.println("Second largest element: " + second);
+        }
+    }
+}
