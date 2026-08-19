@@ -1,3 +1,4 @@
+1
 // CREATING A DOUBLY LINKED LIST
 import java.util.*;
 class Node {
@@ -47,6 +48,7 @@ class Main {
     }
 }
 
+2
 // SUM OF ELEMENTS IN A DOUBLY LINKED LIST
 import java.util.*;
 class Node {
@@ -95,6 +97,7 @@ class Main {
     }
 }
 
+3
 // MAXIMUM ELEMENT IN A DOUBLY LINKED LIST
 import java.util.*;
 class Node {
@@ -148,6 +151,7 @@ class Main {
     }
 }
 
+4
 // PRINT ELEMENTS IN REVERSE ORDER
 import java.util.*;
 class Node {
@@ -200,6 +204,7 @@ class Main {
     }
 }
 
+5
 // SORT THE DOUBLY LINKED LIST
 import java.util.*;
 class Node {
@@ -264,6 +269,7 @@ class Main {
     }
 }
 
+6
 // INSERT ELEMENT IN A DOUBLY LINKED LIST
 import java.util.*;
 class Node {
