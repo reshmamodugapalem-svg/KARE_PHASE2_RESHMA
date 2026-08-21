@@ -1,5 +1,5 @@
 1
-// CREATING A MATRIX USING GRAPH
+// GRAPH WITH MATRIX
 import java.util.*;
 class Main{
     public static void main(String[] args){
