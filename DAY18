@@ -519,3 +519,343 @@ class Main {
         }
     }
 }
+
+7
+// CIRCULAR QUEUE WITH ARRAY
+import java.util.*;
+class Queue {
+    int queue[];
+    int front, rear, size, n;
+    Queue(int n) {
+        this.n = n;
+        queue = new int[n];
+        front = 0;
+        rear = -1;
+        size = 0;
+    }
+    void enqueue(int data) {
+        if (size == n) {
+            System.out.println("Queue is full");
+            return;
+        }
+        rear = (rear + 1) % n;
+        queue[rear] = data;
+        size++;
+    }
+    int dequeue() {
+        if (size == 0) {
+            System.out.println("Queue is empty");
+            return -1;
+        }
+        int data = queue[front];
+        front = (front + 1) % n;
+        size--;
+        return data;
+    }
+    void display() {
+        if (size == 0) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        for (int i = 0; i < size; i++) {
+            System.out.print(queue[(front + i) % n] + " ");
+        }
+        System.out.println();
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Queue q = new Queue(n);
+        while (true) {
+            System.out.println("\n1. Enqueue");
+            System.out.println("2. Dequeue");
+            System.out.println("3. Display");
+            System.out.println("4. Exit");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    int value = sc.nextInt();
+                    q.enqueue(value);
+                    break;
+                case 2:
+                    int removed = q.dequeue();
+                    if (removed != -1)
+                        System.out.println("Deleted: " + removed);
+                    break;
+                case 3:
+                    q.display();
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        }
+    }
+}
+
+8
+// CIRCULAR QUEUE WITH LINKEDLIST
+import java.util.*;
+class Node {
+    int data;
+    Node next;
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class Queue {
+    Node front, rear;
+    Queue() {
+        front = rear = null;
+    }
+    void enqueue(int data) {
+        Node n = new Node(data);
+        if (rear == null) {
+            front = rear = n;
+            rear.next = front;
+        } else {
+            rear.next = n;
+            rear = n;
+            rear.next = front;
+        }
+        System.out.println(data + " inserted");
+    }
+    void dequeue() {
+        if (front == null) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        System.out.println("Deleted: " + front.data);
+        if (front == rear) {
+            front = rear = null;
+        } else {
+            front = front.next;
+            rear.next = front;
+        }
+    }
+    void display() {
+        if (front == null) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        Node temp = front;
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != front);
+        System.out.println();
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Queue q = new Queue();
+        while (true) {
+            System.out.println("\n1. Enqueue");
+            System.out.println("2. Dequeue");
+            System.out.println("3. Display");
+            System.out.println("4. Exit");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    q.enqueue(sc.nextInt());
+                    break;
+                case 2:
+                    q.dequeue();
+                    break;
+                case 3:
+                    q.display();
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        }
+    }
+}
+
+9
+// PRIORITY QUEUE WITH ARRAY
+import java.util.*;
+class Queue {
+    int queue[];
+    int n, size;
+    Queue(int n) {
+        this.n = n;
+        queue = new int[n];
+        size = 0;
+    }
+    void enqueue(int data) {
+        if (size == n) {
+            System.out.println("Queue is full");
+            return;
+        }
+        int i = size - 1;
+        while (i >= 0 && queue[i] > data) {
+            queue[i + 1] = queue[i];
+            i--;
+        }
+        queue[i + 1] = data;
+        size++;
+    }
+    void dequeue() {
+        if (size == 0) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        System.out.println("Deleted: " + queue[0]);
+        for (int i = 0; i < size - 1; i++)
+            queue[i] = queue[i + 1];
+        size--;
+    }
+    void display() {
+        if (size == 0) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        for (int i = 0; i < size; i++)
+            System.out.print(queue[i] + " ");
+        System.out.println();
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Queue q = new Queue(n);
+        while (true) {
+            System.out.println("\n1. Enqueue");
+            System.out.println("2. Dequeue");
+            System.out.println("3. Display");
+            System.out.println("4. Exit");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    q.enqueue(sc.nextInt());
+                    break;
+                case 2:
+                    q.dequeue();
+                    break;
+                case 3:
+                    q.display();
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        }
+    }
+}
+
+10
+// DEQUE WITH ARRAY
+import java.util.*;
+class Deque {
+    int arr[];
+    int front, rear, n;
+    Deque(int n) {
+        this.n = n;
+        arr = new int[n];
+        front = -1;
+        rear = -1;
+    }
+    void addFirst(int data) {
+        if (front == 0 && rear == n - 1) {
+            System.out.println("Deque is full");
+            return;
+        }
+        if (front == -1) {
+            front = rear = 0;
+        } else if (front > 0) {
+            front--;
+        } else {
+            for (int i = rear; i >= front; i--)
+                arr[i + 1] = arr[i];
+            rear++;
+        }
+        arr[front] = data;
+    }
+    void addLast(int data) {
+        if (rear == n - 1) {
+            System.out.println("Deque is full");
+            return;
+        }
+        if (front == -1)
+            front = 0;
+        arr[++rear] = data;
+    }
+    void removeFirst() {
+        if (front == -1) {
+            System.out.println("Deque is empty");
+            return;
+        }
+        System.out.println("Deleted: " + arr[front]);
+        if (front == rear)
+            front = rear = -1;
+        else
+            front++;
+    }
+    void removeLast() {
+        if (rear == -1) {
+            System.out.println("Deque is empty");
+            return;
+        }
+        System.out.println("Deleted: " + arr[rear]);
+        if (front == rear)
+            front = rear = -1;
+        else
+            rear--;
+    }
+    void display() {
+        if (front == -1) {
+            System.out.println("Deque is empty");
+            return;
+        }
+        for (int i = front; i <= rear; i++)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Deque d = new Deque(n);
+        while (true) {
+            System.out.println("\n1. Add First");
+            System.out.println("2. Add Last");
+            System.out.println("3. Remove First");
+            System.out.println("4. Remove Last");
+            System.out.println("5. Display");
+            System.out.println("6. Exit");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    d.addFirst(sc.nextInt());
+                    break;
+                case 2:
+                    d.addLast(sc.nextInt());
+                    break;
+                case 3:
+                    d.removeFirst();
+                    break;
+                case 4:
+                    d.removeLast();
+                    break;
+                case 5:
+                    d.display();
+                    break;
+                case 6:
+                    return;
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        }
+    }
+}
