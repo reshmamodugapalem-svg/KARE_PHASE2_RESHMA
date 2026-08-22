@@ -1,0 +1,123 @@
+1
+// INBUILT METHODS
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+     ArrayList obj = new ArrayList();
+     obj.add(10);
+     obj.add(20);
+     obj.add(30);
+     obj.add(2.5);
+     obj.add('c');
+     obj.add("abc");
+     System.out.print(obj);
+    }
+}
+
+2
+// INBUILT METHODS ONLY INTEGER VALUES
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+     ArrayList<Integer> obj = new ArrayList<Integer>();
+     obj.add(10);
+     obj.add(20);
+     obj.add(30);
+     obj.add(25);
+     obj.add(75);
+     obj.add(100);
+     System.out.print(obj);
+    }
+}
+
+3
+// ARRAYLIST USING USER INPUT
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+     ArrayList<Integer> obj = new ArrayList<Integer>();
+     Scanner s = new Scanner(System.in);
+     int n = s.nextInt();
+     int i;
+     for(i=0;i<n;i++)
+     obj.add(s.nextInt());
+     System.out.print(obj);
+    }
+}
+
+4
+// LINKEDLIST WITH INBUILT METHODS
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+     LinkedList obj = new LinkedList();
+     obj.add(10);
+     obj.add(20);
+     obj.add(30);
+     System.out.print(obj);
+    }
+}
+
+5
+// LINKEDLIST WITH INBUILT METHODS
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+     LinkedList obj = new LinkedList();
+     int i;
+     Scanner sc = new Scanner(System.in);
+     int n = sc.nextInt();
+     for(i=0;i<n;i++)
+     obj.add(sc.nextInt());
+     System.out.print("LinkedList Elements");
+     System.out.println(obj);
+     int ind = sc.nextInt();
+     int val = sc.nextInt();
+     obj.add(ind,val);
+     System.out.println(obj);
+     System.out.println("Insert first position");
+     System.out.println("Enter first element to be add");
+     int d = sc.nextInt();
+     obj.addFirst(d);
+     System.out.print(obj);
+     System.out.println("Insert last position");
+     System.out.println("Enter last element to be add");
+     d = sc.nextInt();
+     obj.addLast(d);
+     System.out.print(obj);
+    }
+}
+
+6
+// LINKEDLIST WITH INBUILT METHODS
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+     LinkedList obj = new LinkedList();
+     int i;
+     Scanner sc = new Scanner(System.in);
+     int n = sc.nextInt();
+     for(i=0;i<n;i++)
+     obj.add(sc.nextInt());
+     System.out.print("LinkedList Elements");
+     System.out.println(obj);
+     int ind = sc.nextInt();
+     int val = sc.nextInt();
+     obj.add(ind,val);
+     System.out.println(obj);
+     System.out.println("Insert first position");
+     System.out.println("Enter first element to be add");
+     int d = sc.nextInt();
+     obj.addFirst(d);
+     System.out.print(obj);
+     System.out.println("Insert last position");
+     System.out.println("Enter last element to be add");
+     d = sc.nextInt();
+     obj.addLast(d);
+     System.out.print(obj);
+     obj.clear();
+     System.out.println(obj);
+    }
+}
+
+7
