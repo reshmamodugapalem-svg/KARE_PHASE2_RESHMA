@@ -49,3 +49,212 @@ class Main{
 }
 
 3
+// DFS USING ADJACENCY MATRIX
+import java.util.*;
+class Main {
+    static int[][] graph;
+    static boolean[] visited;
+    static void dfs(int n, int V) { 
+        visited[n] = true;
+        System.out.print(n + " ");
+        for (int i = 0; i < V; i++) {
+            if (graph[n][i] == 1 && !visited[i]) {
+                dfs(i, V);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int V = obj.nextInt();
+        int E = obj.nextInt();
+        graph = new int[V][V];
+        visited = new boolean[V];
+        for (int i = 0; i < E; i++) {
+            int u = obj.nextInt();
+            int v = obj.nextInt();
+            graph[u][v] = 1;
+            graph[v][u] = 1;
+        }
+        dfs(0, V);
+    }
+}
+
+4
+// BFS USING ADJACENCY MATRIX
+import java.util.*;
+public class Main {
+    static int[][] graph;
+    static boolean[] visited;
+    static int[] queue;
+    static int front, rear;
+    static void bfs(int start, int V) {
+        visited[start] = true;
+        queue[rear++] = start;
+        while (front < rear) {
+            int v = queue[front++];
+            System.out.print(v + " ");
+            for (int i = 0; i < V; i++) {
+                if (graph[v][i] == 1 && !visited[i]) {
+                    visited[i] = true;
+                    queue[rear++] = i;
+                }
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int V = obj.nextInt();
+        int E = obj.nextInt();
+        graph = new int[V][V];
+        visited = new boolean[V];
+        queue = new int[V];
+        front = rear = 0;
+        for (int i = 0; i < E; i++) {
+            int u = obj.nextInt();
+            int v = obj.nextInt();
+            graph[u][v] = 1;
+            graph[v][u] = 1;
+        }
+        bfs(0, V);
+        obj.close();
+    }
+}
+
+5
+// Add and Display Unique Elements
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Set<Integer> obj = new HashSet<>();
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            obj.add(s.nextInt());
+        }
+        System.out.println("Set: " + obj);
+    }
+}
+
+6
+// Search an Element in Set
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Set<Integer> obj = new HashSet<>();
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            obj.add(s.nextInt());
+        }
+        System.out.print("Enter element to search: ");
+        int key = s.nextInt();
+        if (obj.contains(key)) {
+            System.out.println("Element is present");
+        } else {
+            System.out.println("Element is not present");
+        }
+    }
+}
+
+7
+// Remove an Element from Set
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Set<Integer> obj = new HashSet<>();
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            obj.add(s.nextInt());
+        }
+        System.out.print("Enter element to remove: ");
+        int key = s.nextInt();
+        if (obj.remove(key)) {
+            System.out.println("Element removed successfully");
+        } else {
+            System.out.println("Element not found");
+        }
+        System.out.println("Updated Set: " + obj);
+    }
+}
+
+8
+// Find Common Elements Between Two Sets
+Uses retainAll().
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Set<Integer> obj1 = new HashSet<>();
+        Set<Integer> obj2 = new HashSet<>();
+        System.out.print("Enter number of elements in Set 1: ");
+        int n1 = s.nextInt();
+        System.out.println("Enter Set 1 elements:");
+        for (int i = 0; i < n1; i++) {
+            obj1.add(s.nextInt());
+        }
+        System.out.print("Enter number of elements in Set 2: ");
+        int n2 = s.nextInt();
+        System.out.println("Enter Set 2 elements:");
+        for (int i = 0; i < n2; i++) {
+            obj2.add(s.nextInt());
+        }
+        obj1.retainAll(obj2);
+        System.out.println("Common elements: " + obj1);
+    }
+}
+
+9
+// Find Union of Two Sets
+Uses addAll().
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Set<Integer> obj1 = new HashSet<>();
+        Set<Integer> obj2 = new HashSet<>();
+        System.out.print("Enter number of elements in Set 1: ");
+        int n1 = s.nextInt();
+        System.out.println("Enter Set 1 elements:");
+        for (int i = 0; i < n1; i++) {
+            obj1.add(s.nextInt());
+        }
+        System.out.print("Enter number of elements in Set 2: ");
+        int n2 = s.nextInt();
+        System.out.println("Enter Set 2 elements:");
+        for (int i = 0; i < n2; i++) {
+            obj2.add(s.nextInt());
+        }
+        obj1.addAll(obj2);
+        System.out.println("Union of Set 1 and Set 2: " + obj1);
+    }
+}
+Main Set Types
+Set<Integer> obj = new HashSet<>();
+HashSet → Does not guarantee insertion order.
+Set<Integer> obj = new LinkedHashSet<>();
+LinkedHashSet → Maintains insertion order.
+Set<Integer> obj = new TreeSet<>();
+
+10
+// Queue Using ArrayDeque – Insert and Display
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Queue<Integer> obj = new ArrayDeque<>();
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+        System.out.println("Queue: " + obj);
+    }
+}
